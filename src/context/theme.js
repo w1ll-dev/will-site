@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import themes from "../styles/themes";
 
@@ -7,8 +7,16 @@ const GlobalContext = createContext();
 export const StateProvider = ({ children }) => {
   const [activeTheme, setTheme] = useState("light");
 
-  const changeTheme = () =>
-    activeTheme === "dark" ? setTheme("light") : setTheme("dark");
+  useEffect(() => {
+    const themeFromStorage = sessionStorage.getItem("theme") || "light";
+    setTheme(themeFromStorage);
+  }, []);
+
+  const changeTheme = () => {
+    const newTheme = activeTheme === "dark" ? "light" : "dark"
+    setTheme(newTheme)
+    sessionStorage.setItem("theme", newTheme);
+  };
 
   const theme = themes[activeTheme] || themes.light;
 
