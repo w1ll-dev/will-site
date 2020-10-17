@@ -3,14 +3,19 @@ import Switch from "react-switch";
 import sunIcon from "../../assets/icons/sun.svg";
 import moonIcon from "../../assets/icons/moon.svg";
 import { FixIcons, ThemeIcon } from "./style";
+import { useTheme } from "../../context/theme";
+import theme from "../../styles/themes";
 
 export const ToggleTheme = () => {
+  const { changeTheme, activeTheme } = useTheme();
+  const { colors } = theme
+
   return (
     <Switch
-      onChange={() => console.log("toggle")}
-      checked={1}
-      onColor="#fff"
-      onHandleColor="#333333"
+      onChange={() => changeTheme()}
+      checked={activeTheme === "light"}
+      onColor={`${colors.lightOrange}`}
+      onHandleColor={`${colors.dark}`}
       uncheckedIcon={
         <FixIcons>
           <ThemeIcon src={moonIcon} />
