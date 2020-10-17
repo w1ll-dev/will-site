@@ -1,9 +1,10 @@
 import React from 'react'
+import homeIcon from '../assets/icons/home.svg'
 
 export const App = () => {
   return (
     <div>
-      Hello World
+      <img src={homeIcon}/>
     </div>
   )
 }
