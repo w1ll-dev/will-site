@@ -9,7 +9,7 @@ export const StateProvider = ({ children }) => {
 
   useEffect(() => {
     const themeFromStorage = sessionStorage.getItem("theme") || "light";
-    setTheme(themeFromStorage);
+    setTheme(themeFromStorage)
   }, []);
 
   const changeTheme = () => {
