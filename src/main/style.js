@@ -7,3 +7,8 @@ export const Main = styled(Container)`
   margin: 0;
   padding: 0;
 `;
+
+export const Content = styled(Container)`
+  width: 100%;
+  background: ${({theme}) => theme.backgroundContent}
+`;
