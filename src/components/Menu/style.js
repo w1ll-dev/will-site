@@ -16,5 +16,5 @@ export const MenuItem = styled.li`
 export const ItemIcon = styled.img`
   width: 2rem;
   height: 2rem;
-  opacity: ${({active}) => !active && 0.1};
+  opacity: ${({active}) => !active && 0.4};
 `;
