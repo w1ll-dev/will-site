@@ -1,10 +1,17 @@
-import React from 'react'
-import homeIcon from '../assets/icons/home.svg'
+import React from "react";
+import { ThemeProvider } from "styled-components";
+import themes from "../styles/themes";
+import GlobalStyle from "../styles/globalStyles";
+import { Sidebar } from "../components/Sidebar";
+import { Main } from "./style";
 
 export const App = () => {
   return (
-    <div>
-      <img src={homeIcon}/>
-    </div>
-  )
-}
+    <ThemeProvider theme={themes.dark}>
+      <GlobalStyle />
+      <Main>
+        <Sidebar />
+      </Main>
+    </ThemeProvider>
+  );
+};
