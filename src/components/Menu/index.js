@@ -5,7 +5,7 @@ export const Menu = ({ menuItemsList }) => {
   return (
     <MenuList>
       {menuItemsList.map(({ itemIcon, itemRoute }, index) => (
-        <MenuItem>
+        <MenuItem key={Math.random()}>
           <ItemIcon src={itemIcon} />
         </MenuItem>
       ))}
