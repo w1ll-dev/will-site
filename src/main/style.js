@@ -15,5 +15,4 @@ export const Main = styled(Container)`
 export const Content = styled(Container)`
   width: 100%;
   background: ${({theme}) => theme.backgroundContent};
-  
 `;

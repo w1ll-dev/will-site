@@ -10,7 +10,7 @@ export const Wrapper = styled(Container)`
   align-items: center;
   flex-direction: column;
   @media (${device.mobileL}) {
-    padding: 1rem;
+    padding-top: 5rem;
   }
 `;
 
