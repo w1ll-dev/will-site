@@ -6,7 +6,7 @@ export const MenuList = styled.ul`
   flex-direction: column;
   align-items: center;
   height: 12rem;
-  justify-content: space-around;
+  justify-content: space-between;
   @media(${device.mobileL}){
     flex-direction: row;
     width: 50%;
