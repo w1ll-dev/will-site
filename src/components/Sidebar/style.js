@@ -8,13 +8,13 @@ export const Wrapper = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
   width: 8rem;
   background: ${({ theme }) => theme.backgroundSidebar};
   padding: 2rem 0; 
 
   @media(${device.mobileL}){
     flex-direction: row;
+    position: fixed;
     height: 2.5rem;
     width: 100%;
     padding: 2rem; 
