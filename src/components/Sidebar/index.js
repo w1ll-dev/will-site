@@ -1,12 +1,22 @@
 import React from "react";
 import { Menu } from "../Menu";
-import { Wrapper, MyAvatar } from "./style";
+import {
+  Wrapper,
+  MyAvatar,
+  BottomContainer,
+  ContactRow,
+  ContactIcon,
+} from "./style";
 import homeIcon from "../../assets/icons/home.svg";
 import experienceIcon from "../../assets/icons/experience.svg";
 // import contactIcon from "../../assets/icons/contact.svg";
 import codeIcon from "../../assets/icons/code.svg";
+import githubIcon from "../../assets/icons/github.svg";
+import linkedinIcon from "../../assets/icons/linkedin.svg";
 import { ToggleTheme } from "../ToggleTheme";
 import { RoutesENUM } from "../../contants";
+import { Contacts } from "../../contants";
+import { LinkContainer } from "../commom";
 
 const items = [
   { itemIcon: homeIcon, itemRoute: RoutesENUM.HOME },
@@ -15,12 +25,27 @@ const items = [
   { itemIcon: codeIcon, itemRoute: RoutesENUM.CODE_SKILLS },
 ];
 
+const { GITHUB_URL, LINKEDIN_URL} = Contacts
+
 export const Sidebar = () => {
+  const noMobile = window.innerWidth > 1300;
   return (
     <Wrapper>
       <MyAvatar />
       <Menu menuItemsList={items} />
-      <ToggleTheme />
+      <BottomContainer>
+        {noMobile && (
+          <ContactRow>
+            <LinkContainer href={GITHUB_URL}>
+              <ContactIcon src={githubIcon} />
+            </LinkContainer>
+            <LinkContainer href={LINKEDIN_URL}>
+              <ContactIcon src={linkedinIcon} />
+            </LinkContainer>
+          </ContactRow>
+        )}
+        <ToggleTheme />
+      </BottomContainer>
     </Wrapper>
   );
 };
