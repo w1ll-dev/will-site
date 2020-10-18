@@ -14,5 +14,7 @@ export const Main = styled(Container)`
 
 export const Content = styled(Container)`
   width: 100%;
+  height: 100%;
   background: ${({theme}) => theme.backgroundContent};
+  overflow: auto;
 `;

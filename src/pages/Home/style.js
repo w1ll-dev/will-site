@@ -10,8 +10,7 @@ export const Wrapper = styled(Container)`
   width: 100%;
   height: 100%;
   @media (${device.mobileL}) {
-    height: 100vh;
-    padding-top: 5rem;
+    flex: 1;
   }
 `;
 

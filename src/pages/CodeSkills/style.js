@@ -9,9 +9,6 @@ export const Wrapper = styled(Container)`
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  @media (${device.mobileL}) {
-    padding-top: 5rem;
-  }
 `;
 
 export const PageTitle = styled.h1`

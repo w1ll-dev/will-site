@@ -5,13 +5,10 @@ import { device } from "../../styles/devices";
 export const Wrapper = styled(Container)`
   flex-direction: column;
   align-items: center;
-  height: 100%;
   @media (${device.mobileL}) {
     padding: 1rem;
   }
 
-  justify-content: center;
-  width: 100%;
   padding: 5rem 2rem;
 `;
 
@@ -31,7 +28,6 @@ export const ResponsabilitiesContainer = styled(Container)`
   align-items: center;
   @media (${device.mobileL}) {
     flex-direction: column;
-    padding: 2rem 0;
   }
 `;
 
@@ -43,7 +39,6 @@ export const ResumeLastJob = styled(Container)`
 
   @media (${device.mobileL}) {
     width: 100%;
-    padding-top: 4rem;
   }
 `;
 
