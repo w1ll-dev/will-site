@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { device } from "../../styles/devices";
-import themes from "../../styles/themes";
 
 export const MenuList = styled.ul`
   display: flex;

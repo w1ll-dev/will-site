@@ -7,6 +7,7 @@ import flutterDevDarkIcon from "../../assets/icons/color-icons/dark/flutter-dev.
 import reactDevDarkIcon from "../../assets/icons/color-icons/dark/react-dev.svg";
 import {
   Wrapper,
+  PageTitle,
   LastJobTitle,
   Summary,
   JobResposabilityContainer,
@@ -38,6 +39,7 @@ export const ExperiencesPage = () => {
   return (
     <Wrapper>
       <ResumeLastJob>
+        <PageTitle children={text.experiencesPageTitle} />
         <LastJobTitle children={lastJob.title} />
         <Summary children={lastJob.resume} />
       </ResumeLastJob>

@@ -14,7 +14,10 @@ export const Wrapper = styled(Container)`
   }
 `;
 
-export const PageTitle = styled.h1``;
+export const PageTitle = styled.h1`
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid ${({theme}) => theme.backgroundSidebar};
+`;
 export const SkillsRow = styled(Container)`
   justify-content: space-around;
   flex: 1;

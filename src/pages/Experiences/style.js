@@ -52,6 +52,12 @@ export const JobResposabilityContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   width: 100%;
+  transform: translateY(0rem);
+  transition: 500ms;
+  &:hover {
+    transform: scale(1.05);
+    transform: translateY(-1rem);
+  }
   @media (${device.mobileL}) {
     width: 90%;
     padding: 2rem 0;
@@ -59,7 +65,14 @@ export const JobResposabilityContainer = styled(Container)`
   }
 `;
 
-export const LastJobTitle = styled.h1`
+export const PageTitle = styled.h1`
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid ${({theme}) => theme.backgroundSidebar};
+`;
+
+export const LastJobTitle = styled.h2`
   text-align: center;
   margin-bottom: 2rem;
 `;

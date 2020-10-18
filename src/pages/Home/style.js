@@ -5,11 +5,14 @@ import { device } from "../../styles/devices";
 
 export const Wrapper = styled(Container)`
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 2rem;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  @media (${device.mobileL}) {
+    height: 100vh;
+    padding-top: 5rem;
+  }
 `;
 
 export const HomeAvatar = styled(Container)`
@@ -21,7 +24,16 @@ export const HomeAvatar = styled(Container)`
   background-size: contain;
 `;
 
-export const Welcome = styled.h1``;
+export const Welcome = styled.h1`
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid ${({ theme }) => theme.backgroundSidebar};
+`;
+
+export const PageContent = styled(Container)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const MyName = styled.h2`
   font-weight: bold;
@@ -39,7 +51,7 @@ export const AboutMeTitle = styled.h2`
 export const CompleteSummary = styled.p`
   text-align: center;
   width: 80%;
-  @media(${device.mobileL}){
+  @media (${device.mobileL}) {
     width: 80%;
   }
 `;
