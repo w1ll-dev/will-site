@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { RoutesENUM } from "../contants/";
-import { AboutMe } from "../pages/AboutMe";
+import { ExperiencesPage } from "../pages/Experiences";
 import { CodeSkills } from "../pages/CodeSkills";
 import { Contact } from "../pages/Contact";
 import { HomePage } from "../pages/Home";
@@ -19,7 +19,7 @@ export const RootRouter = () => {
         <Contact />
       </Route>
       <Route exact path={RoutesENUM.ABOUT}>
-        <AboutMe />
+        <ExperiencesPage />
       </Route>
       <Redirect to={RoutesENUM.HOME} />
     </Switch>
