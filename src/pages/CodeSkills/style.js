@@ -45,11 +45,11 @@ export const SkillCard = styled(Container)`
 `;
 
 export const SkillAvatar = styled(Container)`
-  display: flex;
   justify-content: center;
   width: 10rem;
   height: 10rem;
   background-image: url(${({ skillImage }) => skillImage});
+  background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
   @media (${device.mobileL}) {
@@ -65,4 +65,6 @@ export const SkillTitle = styled.h1`
   margin-bottom: 2rem;
 `;
 
-export const SkillSummary = styled.p``;
+export const SkillSummary = styled.p`
+  margin: 0.3rem;
+`;
