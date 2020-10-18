@@ -18,7 +18,7 @@ export const RootRouter = () => {
       <Route exact path={RoutesENUM.CONTACT}>
         <Contact />
       </Route>
-      <Route exact path={RoutesENUM.ABOUT}>
+      <Route exact path={RoutesENUM.EXPERIENCE}>
         <ExperiencesPage />
       </Route>
       <Redirect to={RoutesENUM.HOME} />

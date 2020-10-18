@@ -1,7 +1,7 @@
 export const RoutesENUM = {
   HOME: "/home",
   BLOG: "/blog",
-  ABOUT_ME: "/about-me",
+  EXPERIENCE: "/experience",
   CONTACT: "/contact",
   CODE_SKILLS: "/code-skills"
 }
