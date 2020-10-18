@@ -9,6 +9,7 @@ export const Wrapper = styled(Container)`
   align-items: center;
   padding: 2rem;
   width: 100%;
+  height: 100vh;
 `;
 
 export const HomeAvatar = styled(Container)`
@@ -37,7 +38,7 @@ export const AboutMeTitle = styled.h2`
 
 export const CompleteSummary = styled.p`
   text-align: center;
-  width: 600px;
+  width: 80%;
   @media(${device.mobileL}){
     width: 80%;
   }
