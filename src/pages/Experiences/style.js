@@ -1,0 +1,76 @@
+import styled from "styled-components";
+import { Container } from "../../components/commom/index";
+import { device } from "../../styles/devices";
+
+export const Wrapper = styled(Container)`
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  @media (${device.mobileL}) {
+    padding: 1rem;
+  }
+
+  justify-content: center;
+  width: 100%;
+  padding: 5rem 2rem;
+`;
+
+export const LastJobResume = styled(Container)`
+  flex-direction: column;
+  @media (${device.mobileL}) {
+    box-shadow: 0 0 3px ${({theme}) => theme.backgroundSidebar}; 
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+`;
+
+export const ResponsabilitiesContainer = styled(Container)`
+  flex: 1;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  @media (${device.mobileL}) {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+`;
+
+export const ResumeLastJob = styled(Container)`
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  width: 600px;
+
+  @media (${device.mobileL}) {
+    width: 100%;
+    padding-top: 4rem;
+  }
+`;
+
+export const JobResposabilityContainer = styled(Container)`
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media (${device.mobileL}) {
+    width: 90%;
+    padding: 2rem 0;
+    border-bottom: 2px solid ${({ theme }) => theme.backgroundSidebar};
+  }
+`;
+
+export const LastJobTitle = styled.h1`
+  text-align: center;
+  margin-bottom: 2rem;
+`;
+
+export const ResponsabilityIcon = styled.img`
+  width: 10rem;
+  height: 10rem;
+`;
+
+export const JobResposabilityTitle = styled.h3``;
+
+export const Summary = styled.p`
+  text-align: center;
+`;
