@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../styles/devices";
 import themes from "../../styles/themes";
 
 export const MenuList = styled.ul`
@@ -7,6 +8,10 @@ export const MenuList = styled.ul`
   align-items: center;
   height: 12rem;
   justify-content: space-around;
+  @media(${device.mobileL}){
+    flex-direction: row;
+    width: 50%;
+  }
 `;
 
 export const MenuItem = styled.li`
@@ -22,6 +27,10 @@ export const ItemIcon = styled.img`
   transition: 500ms;
   transform: ${({ active }) => active && "scale(1.4)"};
 
+  @media(${device.mobileL}){
+    width: 1.5rem;
+    height: 1.5rem;
+  }
   &:hover {
     transform: scale(1.4);
   }

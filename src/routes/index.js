@@ -1,20 +1,23 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { RoutesENUM } from "../contants/";
+import { AboutMe } from "../pages/AboutMe";
+import { Contact } from "../pages/Contact";
+import { HomePage } from "../pages/Home";
 
 export const RootRouter = () => {
   return (
     <Switch>
       <Route exact path={RoutesENUM.HOME}>
-        <div>HOME</div>
+        <HomePage />
       </Route>
       <Route exact path={RoutesENUM.ABOUT}>
-        <div>ABOUT</div>
+        <AboutMe />
       </Route>
       <Route exact path={RoutesENUM.CONTACT}>
-        <div>CONTACT</div>
+        <Contact />
       </Route>
-      <Redirect to={RoutesENUM.CONTACT} />
+      <Redirect to={RoutesENUM.HOME} />
     </Switch>
   );
 };

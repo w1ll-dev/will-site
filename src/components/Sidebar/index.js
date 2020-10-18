@@ -1,6 +1,6 @@
 import React from "react";
 import { Menu } from "../Menu";
-import { UserAvatar, Wrapper } from "./style";
+import { Wrapper, MyAvatar } from "./style";
 import homeIcon from "../../assets/icons/home.svg";
 import aboutIcon from "../../assets/icons/about.svg";
 import contactIcon from "../../assets/icons/contact.svg";
@@ -16,7 +16,7 @@ const items = [
 export const Sidebar = () => {
   return (
     <Wrapper>
-      <UserAvatar />
+      <MyAvatar />
       <Menu menuItemsList={items} />
       <ToggleTheme />
     </Wrapper>
