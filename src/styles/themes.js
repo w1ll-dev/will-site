@@ -4,13 +4,13 @@ export default {
     dark: "#222831"
   },
   dark: {
-    backgroundSidebar: "#161b27",
-    backgroundContent: "#fff",
-    text: "#fff",
-  },
-  light: {
-    text: "#000",
     backgroundSidebar: "#fff",
     backgroundContent: "#161b27",
+    textColor: "#fff",
+  },
+  light: {
+    textColor: "#333",
+    backgroundSidebar: "#161b27",
+    backgroundContent: "#fff",
   },
 };
