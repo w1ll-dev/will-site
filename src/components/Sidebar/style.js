@@ -14,7 +14,7 @@ export const Wrapper = styled.nav`
 
   @media(${device.mobileL}){
     flex-direction: row;
-    position: fixed;
+    
     height: 2.5rem;
     width: 100%;
     padding: 2rem; 
