@@ -9,3 +9,7 @@ export const Column = styled.div`
   display: flex;
   flex-direction: column;
 `;
+
+export const LinkContainer = styled.a.attrs(() => ({
+  target: "_blank",
+}))``;
