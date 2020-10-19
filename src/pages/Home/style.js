@@ -5,8 +5,6 @@ import { device } from "../../styles/devices";
 
 export const Wrapper = styled(Container)`
   flex-direction: column;
-  height: 100%;
-  justify-content: center;
   align-items: center;
   @media (${device.mobileL}) {
     height: 100vh;
@@ -24,6 +22,7 @@ export const HomeAvatar = styled(Container)`
 `;
 
 export const Welcome = styled.h1`
+  margin: 3rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid ${({ theme }) => theme.backgroundSidebar};
 `;
@@ -32,6 +31,7 @@ export const PageContent = styled(Container)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex: 1;
 `;
 
 export const MyName = styled.h2`
