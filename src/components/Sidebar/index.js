@@ -12,11 +12,13 @@ import experienceIcon from "../../assets/icons/experience.svg";
 // import contactIcon from "../../assets/icons/contact.svg";
 import codeIcon from "../../assets/icons/code.svg";
 import githubIcon from "../../assets/icons/github.svg";
+import githubWhiteIcon from "../../assets/images/github-white.png";
 import linkedinIcon from "../../assets/icons/linkedin.svg";
 import { ToggleTheme } from "../ToggleTheme";
 import { RoutesENUM } from "../../contants";
 import { Contacts } from "../../contants";
 import { LinkContainer } from "../commom";
+import { useTheme } from "../../context/theme";
 
 const items = [
   { itemIcon: homeIcon, itemRoute: RoutesENUM.HOME },
@@ -25,10 +27,11 @@ const items = [
   { itemIcon: codeIcon, itemRoute: RoutesENUM.CODE_SKILLS },
 ];
 
-const { GITHUB_URL, LINKEDIN_URL} = Contacts
+const { GITHUB_URL, LINKEDIN_URL } = Contacts;
 
 export const Sidebar = () => {
   const noMobile = window.innerWidth > 1300;
+  const { activeTheme } = useTheme();
   return (
     <Wrapper>
       <MyAvatar />
@@ -37,7 +40,9 @@ export const Sidebar = () => {
         {noMobile && (
           <ContactRow>
             <LinkContainer href={GITHUB_URL}>
-              <ContactIcon src={githubIcon} />
+              <ContactIcon
+                src={activeTheme === "light" ? githubWhiteIcon : githubIcon}
+              />
             </LinkContainer>
             <LinkContainer href={LINKEDIN_URL}>
               <ContactIcon src={linkedinIcon} />

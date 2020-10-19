@@ -15,15 +15,18 @@ import {
   ContactIcon,
 } from "./style";
 import githubIcon from "../../assets/icons/github.svg";
+import githubWhiteIcon from "../../assets/images/github-white.png";
 import linkedinIcon from "../../assets/icons/linkedin.svg";
 import { text } from "../../assets/text/pt";
 import { LinkContainer } from "../../components/commom";
 import { Contacts} from "../../contants";
+import { useTheme } from "../../context/theme";
 
 const {LINKEDIN_URL, GITHUB_URL} = Contacts
 
 export const HomePage = () => {
   const isMobile = window.innerWidth < 1200;
+  const { activeTheme } = useTheme();
   return (
     <Wrapper>
       <Welcome children={text.welcome} />
@@ -38,10 +41,10 @@ export const HomePage = () => {
             <ContactTitle>Perfis</ContactTitle>
             <ContactRow>
               <LinkContainer href={LINKEDIN_URL}>
-                <ContactIcon src={githubIcon} />
+                <ContactIcon src={linkedinIcon} />
               </LinkContainer>
               <LinkContainer href={GITHUB_URL}>
-                <ContactIcon src={linkedinIcon} />
+                <ContactIcon src={activeTheme === "light" ? githubIcon : githubWhiteIcon} />
               </LinkContainer>
             </ContactRow>
           </ContactContainer>
