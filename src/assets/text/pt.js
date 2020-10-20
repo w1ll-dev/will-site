@@ -7,6 +7,11 @@ export const text = {
 
   experiencesPageTitle: "Experiências", 
   skillsPageTitle: "Principais skills",
+
+  contacts: {
+    linkedIn: "LinkedIn",
+    github: "Github"
+  },
   skills: {
     flutter: {
       title: "Flutter",
