@@ -6,9 +6,8 @@ import { device } from "../../styles/devices";
 export const Wrapper = styled(Container)`
   flex-direction: column;
   align-items: center;
-  @media (${device.mobileL}) {
-    height: 100vh;
-  }
+  justify-content: center;
+  width: 100%;
 `;
 
 export const HomeAvatar = styled(Container)`
@@ -19,6 +18,10 @@ export const HomeAvatar = styled(Container)`
   margin: 1rem 0;
   background-image: url(${Me});
   background-size: contain;
+  @media (${device.mobileL}) {
+    width: 10rem;
+    height: 10rem;
+  }
 `;
 
 export const Welcome = styled.h1`
@@ -31,7 +34,6 @@ export const PageContent = styled(Container)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1;
 `;
 
 export const MyName = styled.h2`
@@ -41,6 +43,9 @@ export const MyName = styled.h2`
 export const ShortSummary = styled.h3`
   text-align: center;
   margin-bottom: 3rem;
+  @media (${device.mobileL}) {
+    width: 70%;
+  }
 `;
 
 export const AboutMeTitle = styled.h2`
@@ -49,7 +54,8 @@ export const AboutMeTitle = styled.h2`
 
 export const CompleteSummary = styled.p`
   text-align: center;
-  width: 80%;
+  width: 50rem;
+
   @media (${device.mobileL}) {
     width: 80%;
   }
@@ -70,8 +76,12 @@ export const ContactRow = styled(Container)`
   width: 100%;
 `;
 
+export const ContactLabel = styled.h4``;
+
 export const ContactIcon = styled.img`
   width: 5rem;
   height: 5rem;
+  @media (${device.mobileL}) {
+    margin: 1rem 0;
+  }
 `;
-
