@@ -28,9 +28,9 @@ export const BottomContainer = styled(Container)`
   height: 5rem;
   width: 100%;
   @media (${device.mobileL}) {
-    height: 0;
-    width: 0;
-    justify-content: center;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
   }
 `;
 
