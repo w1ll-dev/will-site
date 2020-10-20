@@ -7,14 +7,21 @@ export const Main = styled(Container)`
   height: 100vh;
   margin: 0;
   padding: 0;
-  @media(${device.mobileL}){
-    flex-direction: column;
+  @media (${device.mobileL}) {
+    height: 100%;
+    display: grid;
+    grid-template-areas:
+      "content"
+      "sidebar";
   }
 `;
 
 export const Content = styled(Container)`
   width: 100%;
   height: 100%;
-  background: ${({theme}) => theme.backgroundContent};
+  background: ${({ theme }) => theme.backgroundContent};
   overflow: auto;
+  @media (${device.mobileL}) {
+    grid-area: content;
+  }
 `;

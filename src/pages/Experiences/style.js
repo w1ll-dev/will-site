@@ -15,7 +15,7 @@ export const Wrapper = styled(Container)`
 export const LastJobResume = styled(Container)`
   flex-direction: column;
   @media (${device.mobileL}) {
-    box-shadow: 0 0 3px ${({theme}) => theme.backgroundSidebar}; 
+    box-shadow: 0 0 3px ${({ theme }) => theme.backgroundSidebar};
     flex-direction: column;
     padding: 2rem 0;
   }
@@ -57,6 +57,9 @@ export const JobResposabilityContainer = styled(Container)`
     width: 90%;
     padding: 2rem 0;
     border-bottom: 2px solid ${({ theme }) => theme.backgroundSidebar};
+    &:last-child {
+      border: none;
+    }
   }
 `;
 
@@ -64,7 +67,7 @@ export const PageTitle = styled.h1`
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid ${({theme}) => theme.backgroundSidebar};
+  border-bottom: 2px solid ${({ theme }) => theme.backgroundSidebar};
 `;
 
 export const LastJobTitle = styled.h2`
