@@ -3,7 +3,6 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import { RoutesENUM } from "../contants/";
 import { ExperiencesPage } from "../pages/Experiences";
 import { CodeSkills } from "../pages/CodeSkills";
-import { Contact } from "../pages/Contact";
 import { HomePage } from "../pages/Home";
 
 export const RootRouter = () => {
@@ -14,9 +13,6 @@ export const RootRouter = () => {
       </Route>
       <Route exact path={RoutesENUM.CODE_SKILLS}>
         <CodeSkills />
-      </Route>
-      <Route exact path={RoutesENUM.CONTACT}>
-        <Contact />
       </Route>
       <Route exact path={RoutesENUM.EXPERIENCE}>
         <ExperiencesPage />
