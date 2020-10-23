@@ -18,8 +18,13 @@ import {
 } from "./style";
 import { text } from "../../assets/text/pt";
 import { useTheme } from "../../context/theme";
+import { i18n } from '../../translate/i18n';
+import { i18nKeys } from "../../contants";
 
-const { lastJob } = text;
+const {
+  experiences_page_title,
+  last_job,
+} = i18nKeys;
 
 const darkIcons = [
   flutterDevDarkIcon,
@@ -39,16 +44,16 @@ export const ExperiencesPage = () => {
   return (
     <Wrapper>
       <ResumeLastJob>
-        <PageTitle children={text.experiencesPageTitle} />
-        <LastJobTitle children={lastJob.title} />
-        <Summary children={lastJob.resume} />
+        <PageTitle children={i18n.t(experiences_page_title)} />
+        <LastJobTitle children={i18n.t(last_job.title)} />
+        <Summary children={i18n.t(last_job.resume)} />
       </ResumeLastJob>
       <ResponsabilitiesContainer>
-        {lastJob.jobResposabilities.map(({ icon, title, summary }, index) => (
+        {last_job.job_responsabilities.map(({title, summary}, index) => (
           <JobResposabilityContainer key={Math.random()}>
-            <JobResposabilityTitle children={title} />
+            <JobResposabilityTitle children={i18n.t(title)} />
             <ResponsabilityIcon src={currentIcons[index]} />
-            <Summary children={summary} />
+            <Summary children={i18n.t(summary)} />
           </JobResposabilityContainer>
         ))}
       </ResponsabilitiesContainer>

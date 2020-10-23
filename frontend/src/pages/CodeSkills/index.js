@@ -11,8 +11,9 @@ import {
   SkillAvatar,
   SkillSummary,
 } from "./style";
-import { text } from "../../assets/text/pt";
-const { skills, skillsPageTitle } = text;
+import { i18n } from '../../translate/i18n';
+import { i18nKeys } from "../../contants";
+const { skills, skills_page_title } = i18nKeys;
 
 const codeSkillsList = [
   {
@@ -35,13 +36,13 @@ const codeSkillsList = [
 export const CodeSkills = () => {
   return (
     <Wrapper>
-      <PageTitle children={skillsPageTitle} />
+      <PageTitle children={i18n.t(skills_page_title)} />
       <SkillsRow>
         {codeSkillsList.map(({ skillIcon, skillTitle, skillSummary }) => (
           <SkillCard key={Math.random()}>
-            <SkillTitle children={skillTitle} />
+            <SkillTitle children={i18n.t(skillTitle)} />
             <SkillAvatar skillImage={skillIcon} />
-            <SkillSummary children={skillSummary} />
+            <SkillSummary children={i18n.t(skillSummary)} />
           </SkillCard>
         ))}
       </SkillsRow>

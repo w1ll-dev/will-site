@@ -1,7 +1,8 @@
 import React from "react";
+import { i18n } from '../../translate/i18n';
+import { i18nKeys } from "../../contants/";
 import {
   Wrapper,
-  PageResume,
   Welcome,
   HomeAvatar,
   MyName,
@@ -18,7 +19,6 @@ import {
 import githubIcon from "../../assets/icons/github.svg";
 import githubWhiteIcon from "../../assets/images/github-white.png";
 import linkedinIcon from "../../assets/icons/linkedin.svg";
-import { text } from "../../assets/text/pt";
 import { LinkContainer } from "../../components/commom";
 import { Contacts } from "../../contants";
 import { useTheme } from "../../context/theme";
@@ -32,33 +32,34 @@ const {
   short_summary,
   about_me_title,
   complete_summary,
-} = text;
+} = i18nKeys;
 
 export const HomePage = () => {
   const isMobile = window.innerWidth < 1200;
   const { activeTheme } = useTheme();
+
   return (
     <Wrapper>
-      <Welcome children={welcome} />
+      <Welcome children={i18n.t(welcome)} />
       <HomeAvatar />
       <PageContent>
-        <MyName children={my_name} />
-        <ShortSummary children={short_summary} />
-        <AboutMeTitle children={about_me_title} />
-        <CompleteSummary children={complete_summary} />
+        <MyName children={i18n.t(my_name)} />
+        <ShortSummary children={i18n.t(short_summary)} />
+        <AboutMeTitle children={i18n.t(about_me_title)} />
+        <CompleteSummary children={i18n.t(complete_summary)} />
         {isMobile && (
           <ContactContainer>
             <ContactTitle>Perfis</ContactTitle>
             <ContactRow>
               <LinkContainer href={LINKEDIN_URL}>
                 <ContactIcon src={linkedinIcon} />
-                <ContactLabel children={contacts.linkedIn} />
+                <ContactLabel children={i18n.t(contacts.linkedIn)} />
               </LinkContainer>
               <LinkContainer href={GITHUB_URL}>
                 <ContactIcon
                   src={activeTheme === "light" ? githubIcon : githubWhiteIcon}
                 />
-                <ContactLabel children={contacts.github} />
+                <ContactLabel children={i18n.t(contacts.github)} />
               </LinkContainer>
             </ContactRow>
           </ContactContainer>

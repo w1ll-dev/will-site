@@ -84,4 +84,5 @@ export const JobResposabilityTitle = styled.h3``;
 
 export const Summary = styled.p`
   text-align: center;
+  padding: 2rem;
 `;
