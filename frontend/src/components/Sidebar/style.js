@@ -25,7 +25,7 @@ export const BottomContainer = styled(Container)`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 5rem;
+  height: 8rem;
   width: 100%;
   @media (${device.mobileL}) {
     flex-direction: row;
@@ -57,4 +57,12 @@ export const MyAvatar = styled(Container)`
   @media (${device.mobileL}) {
     display: none;
   }
+`;
+
+export const TranslateRow = styled(ContactRow)``;
+
+export const CountryFlag = styled.img`
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
 `;
