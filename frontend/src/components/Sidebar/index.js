@@ -8,6 +8,8 @@ import {
   ContactIcon,
   TranslateRow,
   CountryFlag,
+  SettingsIcon,
+  SettingsLinkContainer
 } from "./style";
 import homeIcon from "../../assets/icons/home.svg";
 import experienceIcon from "../../assets/icons/experience.svg";
@@ -17,11 +19,14 @@ import githubWhiteIcon from "../../assets/images/github-white.png";
 import linkedinIcon from "../../assets/icons/linkedin.svg";
 import brazilIcon from "../../assets/icons/brazil.svg";
 import usaIcon from "../../assets/icons/united-states.svg";
+import settingsIcon from "../../assets/icons/settings.svg";
 import { ToggleTheme } from "../ToggleTheme";
 import { RoutesENUM, Idiom } from "../../contants";
 import { Contacts } from "../../contants";
 import { LinkContainer } from "../commom";
 import { useTheme } from "../../context/theme";
+import { PopUp } from "../../pages/Settings";
+import { Link } from "react-router-dom";
 
 const items = [
   { itemIcon: homeIcon, itemRoute: RoutesENUM.HOME },
@@ -45,7 +50,7 @@ export const Sidebar = () => {
     <Wrapper>
       <MyAvatar />
       <Menu menuItemsList={items} />
-      {noMobile && (
+      {noMobile ? (
         <BottomContainer>
           <ContactRow>
             <LinkContainer href={GITHUB_URL}>
@@ -69,6 +74,10 @@ export const Sidebar = () => {
             />
           </TranslateRow>
         </BottomContainer>
+      ) : (
+        <Link to={RoutesENUM.SETTINGS}>
+          <SettingsIcon src={settingsIcon} />
+        </Link>
       )}
     </Wrapper>
   );

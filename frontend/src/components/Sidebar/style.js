@@ -14,7 +14,8 @@ export const Wrapper = styled.nav`
 
   @media (${device.mobileL}) {
     flex-direction: row;
-
+    position: sticky;
+    top: 0;
     height: 2.5rem;
     width: 100%;
     padding: 2rem;
@@ -62,6 +63,12 @@ export const MyAvatar = styled(Container)`
 export const TranslateRow = styled(ContactRow)``;
 
 export const CountryFlag = styled.img`
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+`;
+
+export const SettingsIcon = styled.img`
   width: 2rem;
   height: 2rem;
   cursor: pointer;
