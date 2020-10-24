@@ -8,11 +8,9 @@ export const Main = styled(Container)`
   margin: 0;
   padding: 0;
   @media (${device.mobileL}) {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    display: grid;
-    grid-template-areas:
-      "content"
-      "sidebar";
   }
 `;
 
@@ -20,8 +18,4 @@ export const Content = styled(Container)`
   width: 100%;
   height: 100%;
   background: ${({ theme }) => theme.backgroundContent};
-  overflow: auto;
-  @media (${device.mobileL}) {
-    grid-area: content;
-  }
 `;
