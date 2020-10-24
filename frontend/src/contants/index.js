@@ -2,7 +2,7 @@ export const RoutesENUM = {
   HOME: "/home",
   BLOG: "/blog",
   EXPERIENCE: "/experience",
-  CONTACT: "/contact",
+  SETTINGS: "/settings",
   CODE_SKILLS: "/code-skills",
 };
 
@@ -25,6 +25,8 @@ export const i18nKeys = {
   complete_summary: "complete_summary",
   experiences_page_title: "experiences_page_title",
   skills_page_title: "skills_page_title",
+  theme_title: "theme_title",
+  language:   "language",
   skills: {
     flutter: {
       title: "skills.flutter.title",
