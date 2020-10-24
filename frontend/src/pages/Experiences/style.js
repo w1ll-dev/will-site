@@ -7,8 +7,9 @@ export const Wrapper = styled(Container)`
   align-items: center;
   @media (${device.mobileL}) {
     padding: 1rem;
+    overflow-y: scroll;
   }
-
+  
   padding: 5rem 2rem;
 `;
 
@@ -60,6 +61,8 @@ export const JobResposabilityContainer = styled(Container)`
     &:last-child {
       border: none;
     }
+    transform: none;
+    transition: 0;
   }
 `;
 

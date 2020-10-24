@@ -50,7 +50,7 @@ export const ExperiencesPage = () => {
       </ResumeLastJob>
       <ResponsabilitiesContainer>
         {last_job.job_responsabilities.map(({title, summary}, index) => (
-          <JobResposabilityContainer key={Math.random()}>
+          <JobResposabilityContainer key={index}>
             <JobResposabilityTitle children={i18n.t(title)} />
             <ResponsabilityIcon src={currentIcons[index]} />
             <Summary children={i18n.t(summary)} />
