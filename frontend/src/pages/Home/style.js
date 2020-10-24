@@ -8,6 +8,9 @@ export const Wrapper = styled(Container)`
   align-items: center;
   justify-content: center;
   width: 100%;
+  @media (${device.mobileL}) {
+    height: 1fr;
+  }
 `;
 
 export const HomeAvatar = styled(Container)`
@@ -18,10 +21,6 @@ export const HomeAvatar = styled(Container)`
   margin: 1rem 0;
   background-image: url(${Me});
   background-size: contain;
-  @media (${device.mobileL}) {
-    width: 10rem;
-    height: 10rem;
-  }
 `;
 
 export const Welcome = styled.h1`
