@@ -9,6 +9,8 @@ const {
   experiences_page_title,
   skills_page_title,
 
+  theme_title,
+  language,
   settings_title, 
   contacts,
 
@@ -27,7 +29,8 @@ export const enText = {
       my_name,
       short_summary,
       complete_summary,
-
+      theme_title,
+      language,
       experiences_page_title,
       skills_page_title,
       

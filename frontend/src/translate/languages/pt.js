@@ -9,6 +9,8 @@ const {
   experiences_page_title,
   skills_page_title,
 
+  theme_title,
+  language,
   settings_title,
   contacts,
 
@@ -31,6 +33,8 @@ export const ptText = {
       experiences_page_title,
       skills_page_title,
       settings_title,
+      theme_title,
+      language,
       contacts: {
         linkedIn: contacts.linkedIn,
         github: contacts.github,
