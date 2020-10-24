@@ -8,6 +8,10 @@
   "experiences_page_title": "Experiências", 
   "skills_page_title": "Principais skills",
   "settings_title": "Configurações",
+
+  "theme_title": "Tema",
+  "language": "Idioma",
+
   "contacts": {
     "linkedIn": "LinkedIn",
     "github": "Github"

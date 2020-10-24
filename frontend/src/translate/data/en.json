@@ -7,7 +7,11 @@
 
   "experiences_page_title": "Experiences", 
   "skills_page_title": "Main skills",
+  
   "settings_title": "Settings",
+  "theme_title": "Theme",
+  "language": "Language",
+
   "contacts": {
     "linkedIn": "LinkedIn",
     "github": "Github"
