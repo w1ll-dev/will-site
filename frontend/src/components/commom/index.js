@@ -22,3 +22,7 @@ export const LinkContainer = styled.a.attrs(() => ({
     text-decoration: none;
   }
 `;
+
+export const SettingsLinkContainer = styled.a.attrs(() => ({
+  target: "_blank",
+}))``;
