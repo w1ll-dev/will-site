@@ -5,10 +5,10 @@ import { device } from "../../styles/devices";
 export const Wrapper = styled(Container)`
   padding: 2rem;
   width: 100%;
-  height: 100%;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  overflow-y: scroll;
 `;
 
 export const PageTitle = styled.h1`
