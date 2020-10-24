@@ -4,6 +4,7 @@ import { RoutesENUM } from "../contants/";
 import { ExperiencesPage } from "../pages/Experiences";
 import { CodeSkills } from "../pages/CodeSkills";
 import { HomePage } from "../pages/Home";
+import { Settigs } from "../pages/Settings";
 
 export const RootRouter = () => {
   return (
@@ -13,6 +14,9 @@ export const RootRouter = () => {
       </Route>
       <Route exact path={RoutesENUM.CODE_SKILLS}>
         <CodeSkills />
+      </Route>
+      <Route exact path={RoutesENUM.SETTINGS}>
+        <Settigs />
       </Route>
       <Route exact path={RoutesENUM.EXPERIENCE}>
         <ExperiencesPage />
