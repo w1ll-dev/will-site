@@ -38,7 +38,7 @@ const { GITHUB_URL, LINKEDIN_URL } = Contacts;
 
 export const Sidebar = () => {
   const { enKey, ptKey, storageKey } = Idiom;
-  const noMobile = window.innerWidth > 1300;
+  const noMobile = window.innerWidth > 438;
   const { activeTheme } = useTheme();
 
   const changeIdiom = ({ newIdiomKey }) => {

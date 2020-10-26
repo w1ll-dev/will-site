@@ -4,7 +4,7 @@ import { Container } from "../../components/commom/index";
 export const Wrapper = styled(Container)`
   flex-direction: column;
   align-content: center;
-  justify-content: center;
+  justify-content: space-evenly;
   background: ${({theme}) => theme.background};
   width: 100%;
   height: 85vh;
@@ -43,5 +43,6 @@ export const IconRow = styled(Container)`
 export const Icon = styled.img`
   width: 8rem;
   height: 8rem;
+  cursor: pointer;
 `;
 

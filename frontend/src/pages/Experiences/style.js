@@ -5,12 +5,14 @@ import { device } from "../../styles/devices";
 export const Wrapper = styled(Container)`
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
   @media (${device.mobileL}) {
     padding: 1rem;
     overflow-y: scroll;
   }
   
-  padding: 5rem 2rem;
+  padding: 2rem 2rem;
 `;
 
 export const LastJobResume = styled(Container)`

@@ -33,6 +33,7 @@ export const PageContent = styled(Container)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 `;
 
 export const MyName = styled.h2`
@@ -54,9 +55,12 @@ export const AboutMeTitle = styled.h2`
 export const CompleteSummary = styled.p`
   text-align: center;
   width: 50rem;
+  @media (${device.tablet}) {
+    width: 70%;
+  }
 
   @media (${device.mobileL}) {
-    width: 80%;
+    width: 100%;
   }
 `;
 export const ContactContainer = styled(Container)`

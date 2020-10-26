@@ -35,7 +35,7 @@ const {
 } = i18nKeys;
 
 export const HomePage = () => {
-  const isMobile = window.innerWidth < 1200;
+  const isMobile = window.innerWidth < 438;
   const { activeTheme } = useTheme();
 
   return (
