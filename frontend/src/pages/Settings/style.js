@@ -1,13 +1,15 @@
 import styled from "styled-components";
 import { Container } from "../../components/commom/index";
+import { pageTransitions } from "../../styles/animations";
 
 export const Wrapper = styled(Container)`
   flex-direction: column;
   align-content: center;
   justify-content: space-evenly;
-  background: ${({theme}) => theme.background};
+  background: ${({ theme }) => theme.background};
   width: 100%;
   height: 85vh;
+  animation: ${pageTransitions} 500ms linear;
 `;
 
 export const PopUpContainer = styled(Container)`
@@ -19,13 +21,13 @@ export const PopUpContainer = styled(Container)`
 `;
 
 export const Title = styled.h1`
-  color: ${({theme}) => theme.background};
+  color: ${({ theme }) => theme.background};
   text-align: center;
   margin: 1rem 0;
 `;
 
 export const SettingTitle = styled.h3`
-  color: ${({theme}) => theme.background};
+  color: ${({ theme }) => theme.background};
   margin: 1rem 0;
 `;
 
@@ -45,4 +47,3 @@ export const Icon = styled.img`
   height: 8rem;
   cursor: pointer;
 `;
-
