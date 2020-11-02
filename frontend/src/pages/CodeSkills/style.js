@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../components/commom/index";
 import { device } from "../../styles/devices";
+import { pageTransitions } from "../../styles/animations";
 
 export const Wrapper = styled(Container)`
   padding: 2rem;
@@ -9,6 +10,7 @@ export const Wrapper = styled(Container)`
   align-items: center;
   flex-direction: column;
   overflow-y: scroll;
+  animation: ${pageTransitions} 500ms linear;
 `;
 
 export const PageTitle = styled.h1`
@@ -27,7 +29,7 @@ export const SkillsRow = styled(Container)`
 
 export const SkillCard = styled(Container)`
   box-shadow: 0 0 3px ${({ theme }) => theme.backgroundSidebar};
-  boder-radius: 0.3rem;
+  border-radius: 0.3rem;
   width: 30%;
   height: 20rem;
   padding: 0.5rem;
@@ -41,6 +43,7 @@ export const SkillCard = styled(Container)`
   @media (${device.mobileL}) {
     width: 100%;
     margin: 1.5rem 0;
+    &:hover {}
   }
 `;
 

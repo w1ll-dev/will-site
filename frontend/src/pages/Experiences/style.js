@@ -1,12 +1,14 @@
 import styled from "styled-components";
 import { Container } from "../../components/commom/index";
 import { device } from "../../styles/devices";
+import { pageTransitions } from "../../styles/animations";
 
 export const Wrapper = styled(Container)`
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
   overflow-y: auto;
+  animation: ${pageTransitions} 500ms linear;
   @media (${device.mobileL}) {
     padding: 1rem;
     overflow-y: scroll;

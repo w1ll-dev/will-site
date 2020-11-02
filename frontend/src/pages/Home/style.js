@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { Container } from "../../components/commom/index";
 import Me from "../../assets/images/me.jpeg";
 import { device } from "../../styles/devices";
+import { pageTransitions } from "../../styles/animations";
 
 export const Wrapper = styled(Container)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 100%;
+  animation: ${pageTransitions} 500ms linear;
   @media (${device.mobileL}) {
     height: 1fr;
   }
