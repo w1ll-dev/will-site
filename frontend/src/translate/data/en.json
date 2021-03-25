@@ -1,0 +1,67 @@
+{
+  "welcome": "Welcome",
+  "about_me_title": "A little about myself",
+  "my_name": "Will Márcio",
+  "short_summary": "Software Developer with ReactJS, React Native and Flutter.",
+  "complete_summary": "Hello and welcome, this is the curriculum of a person who is passionate about software development and who made the decision to work with what he likes about two years ago. During this period I developed some personal projects and currently work for a food company where I learned a lot and made great friends, you will know a little more about that in the experiences tab.",
+
+  "experiences_page_title": "Experiences", 
+  "skills_page_title": "Main skills",
+  
+  "settings_title": "Settings",
+  "theme_title": "Theme",
+  "language": "Language",
+
+  "contacts": {
+    "linkedIn": "LinkedIn",
+    "github": "Github"
+  },
+  "skills": {
+    "flutter": {
+      "title": "Flutter",
+      "summary": "With the flutter framwork of the dart I can build applications following design patterns and using smartphone features such as geolocation, local authentication with biometrics and face id, consuming rest apis from the backend via http routes for example."
+    },
+    "reactjs": {
+      "title": "React",
+      "summary": "With the react framework I build responsive applications following design patterns and that can use various types of features such as authentication, simultaneous update of data for various users, consumption of rest api, etc."
+    },
+    "nodejs": {
+      "title": "Nodejs",
+      "summary": "Using nodejs I am able to create rest apis that access, make changes to databases and provide this data through http routes, I can also add features like authentication with jwt for example."
+    }
+  },
+  "jobs": [
+    {
+      "title": "Development Intern at Sangati Berga",
+      "resume": "I worked as a development intern at Sangati Berga, during this period I had great experiences and learned a little more about how it works and software development in companies in the industrial sector. During the period I had three main responsibilities:",
+      "job_responsabilities": [
+        {
+          "title": "Machine control",
+          "summary": "Development of mobile software for machine control in dart, javascript and c ++ languages. During the period I used the flutter framework on the frontend, on the backend I used nodejs and c ++."
+        },
+        {
+          "title": "Time is money",
+          "summary": "Development of software for managing deadlines and tasks of the technical office in Javascript using react on the frontend, and nodejs on the Backend."
+        },
+        {
+          "title": "Code review",
+          "summary": "Assistance in the dart and javascript codes of the other two developers who work with me."
+        }
+      ]
+    },
+    {
+      "title": "Smarttv developer at Mirakulo",
+      "resume": "I currently work as a smarttv developer at Mirakulo software. Together with the Globo network television we built and currently maintain Globoplay for smarttv, one of the most used applications in the country. At mirakulo one of the people responsible for:",
+      "job_responsabilities": [
+        {
+          "title": "Globoplay kids",
+          "summary": "Creation of the application's kids mode with implementation with its own graphic interface, application of filters on the backend in addition to sending metrics to google analytics."
+        },
+        {
+          "title": "Maintenance and innovation at Globoplay",
+          "summary": "Maintenance of the app in partnership with the globe team Implementing good practices and design standards as well as versioning implementing Git Flow."
+        }
+      ]
+    }
+  ]
+}

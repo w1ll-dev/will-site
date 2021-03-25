@@ -1,0 +1,67 @@
+{
+  "welcome": "Bem Vindo",
+  "about_me_title": "Um pouco sobre mim",
+  "my_name": "Will Márcio",
+  "short_summary": "Desenvolvedor de Software com ReactJS, React Native e Flutter.",
+  "complete_summary": "Olá e bem-vindo, este é o curriculo de uma pessoa que é apaixonada por desenvolvimento de software e que tomou a decisão de trabalhar com o que gosta há aproximadamente dois anos. Durante esse período desenvolvi alguns projetos pessoais e Trabalhei para uma empresa do setor alimentício onde aprendi muito e fiz grandes amigos, você saberá um pouco mais sobre isso na aba de experiências.",
+
+  "experiences_page_title": "Experiências", 
+  "skills_page_title": "Principais skills",
+  "settings_title": "Configurações",
+
+  "theme_title": "Tema",
+  "language": "Idioma",
+
+  "contacts": {
+    "linkedIn": "LinkedIn",
+    "github": "Github"
+  },
+  "skills": {
+    "flutter": {
+      "title": "Flutter",
+      "summary": "Com o framwork flutter do dart consigo contruir aplicações seguindo padrões de projeto e utillizando funcionalidades do smartphone como geolocalização, autenticação local com biometria e face id, consumindo rest apis do backend por meio de rotas http por exemplo."
+    },
+    "reactjs": {
+      "title": "React",
+      "summary": "Com o framwork react construo aplicações responsivas seguindo padrões de projeto e que podem utilizar vários tipos de features como autenticação, atualização simultânea de dados para vários usuários, consumo de rest api, etc."
+    },
+    "nodejs": {
+      "title": "Nodejs",
+      "summary": "Utilizando o nodejs sou capaz de criar rest apis que acessam, fazem alterações em bancos de dados e fornecem esses dados por meio de rotas http, tambem consigo adicionar funcionalidades como autenticação com jwt por exemplo."
+    }
+  },
+  "jobs": [
+    {
+      "title": "Estagiário de Desenvolvimento na empresa Sangati Berga",
+      "resume": "Trabalhei como estagiário de desenvolvimento na empresa Sangati Berga, nesse período tive ótimas experiências e conheci um pouco mais sobre como funciona e desenvolvimento de software em empresas do setor industrial. Durante o período tive três principais responsabilidades:",
+      "job_responsabilities": [
+        {
+          "title": "Controle de máquina",
+          "summary": "Desenvolvimento de software mobile para controle de Máquina nas linguagens dart, javascript e c++. Durante o período utilizei o framework flutter no frontend, no back-end utilizei nodejs e c++."
+        },
+        {
+          "title": "Tempo é dinheiro",
+          "summary": "Desenvolvimento de software para gerenciamento de prazos e tarefas do escritório técnico em linguagem Javascript utilizando react no frontend, e nodejs no Backend."
+        },
+        {
+          "title": "Revisão de código",
+          "summary": "Auxilio nos códigos dart e javascript dos outros dois desenvolvedores que trabalham comigo."
+        }
+      ]
+    },
+    {
+      "title": "Desenvolvedor para Smartv na Mirakulo",
+      "resume": "Atualmente eu trabalho como desenvolvedor de smartv na empresa Mirakulo software. Em conjunto com a rede globo nós construímos e atualmente fazemos manutenção no globoplay para smartv, um dos aplicativos mais utilizados do país. Na mirakulo um dos sou responsáveis por:",
+      "job_responsabilities": [
+        {
+          "title": "Globoplay kids",
+          "summary": "Criação do modo kids da aplicação com implementação de interface gráfica própria, aplicação de filtros de conteúdo no backend alem de envio de métricas para google analytics."
+        },
+        {
+          "title": "Manutenção e inovação no Globoplay",
+          "summary": "Manutenção da app em parceria com o time da globo Implementando boas práticas e padrões de projeto assim como versionamento implementando o git flow."
+        }
+      ]
+    }
+  ]
+}
