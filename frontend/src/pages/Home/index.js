@@ -1,6 +1,6 @@
 import React from "react";
 import { i18n } from '../../translate/i18n';
-import { i18nKeys } from "../../contants/";
+import { i18nKeys } from "../../constants";
 import {
   Wrapper,
   Welcome,
@@ -16,11 +16,13 @@ import {
   ContactLabel,
   ContactIcon,
 } from "./style";
-import githubIcon from "../../assets/icons/github.svg";
-import githubWhiteIcon from "../../assets/images/github-white.png";
-import linkedinIcon from "../../assets/icons/linkedin.svg";
+import {
+  githubIcon,
+  githubWhiteIcon,
+  linkedinIcon,
+} from '../../assets'
 import { LinkContainer } from "../../components/commom";
-import { Contacts } from "../../contants";
+import { Contacts } from "../../constants";
 import { useTheme } from "../../context/theme";
 
 const { LINKEDIN_URL, GITHUB_URL } = Contacts;

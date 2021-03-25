@@ -1,16 +1,3 @@
-import { 
-  flutterDevDarkIcon,
-  reactDevDarkIcon,
-  codeReviewDarkIcon,
-  kidsLightIcon,
-  maintenceLightIcon,
-  flutterDevLightIcon,
-  reactDevLightIcon,
-  codeReviewLightIcon,
-  maintenceDarkIcon,
-  kidsDarkIcon
-} from '../assets'
-
 export const RoutesENUM = {
   HOME: "/home",
   BLOG: "/blog",

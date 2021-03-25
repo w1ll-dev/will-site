@@ -9,23 +9,23 @@ import {
   TranslateRow,
   CountryFlag,
   SettingsIcon,
-  SettingsLinkContainer
 } from "./style";
-import homeIcon from "../../assets/icons/home.svg";
-import experienceIcon from "../../assets/icons/experience.svg";
-import codeIcon from "../../assets/icons/code.svg";
-import githubIcon from "../../assets/icons/github.svg";
-import githubWhiteIcon from "../../assets/images/github-white.png";
-import linkedinIcon from "../../assets/icons/linkedin.svg";
-import brazilIcon from "../../assets/icons/brazil.svg";
-import usaIcon from "../../assets/icons/united-states.svg";
-import settingsIcon from "../../assets/icons/settings.svg";
+import {
+  homeIcon,
+  experienceIcon,
+  codeIcon,
+  githubIcon,
+  githubWhiteIcon,
+  linkedinIcon,
+  brazilIcon,
+  usaIcon,
+  settingsIcon
+} from '../../assets'
 import { ToggleTheme } from "../ToggleTheme";
-import { RoutesENUM, Idiom } from "../../contants";
-import { Contacts } from "../../contants";
+import { RoutesENUM, Idiom } from "../../constants";
+import { Contacts } from "../../constants";
 import { LinkContainer } from "../commom";
 import { useTheme } from "../../context/theme";
-import { PopUp } from "../../pages/Settings";
 import { Link } from "react-router-dom";
 
 const items = [
