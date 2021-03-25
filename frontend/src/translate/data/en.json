@@ -30,22 +30,38 @@
       "summary": "Using nodejs I am able to create rest apis that access, make changes to databases and provide this data through http routes, I can also add features like authentication with jwt for example."
     }
   },
-  "last_job": {
-    "title": "Development Intern at Sangati Berga.",
-    "resume": "I currently work as a development intern at Sangati Berga, during this period I had great experiences and learned a little more about how it works and software development in companies in the industrial sector. During the period I had three main responsibilities:",
-    "job_responsabilities": [
-      {
-        "title": "Machine control.",
-        "summary": "Development of mobile software for machine control in dart, javascript and c ++ languages. During the period I used the flutter framework on the frontend, on the backend I used nodejs and c ++."
-      },
-      {
-        "title": "Time is money.",
-        "summary": "Development of software for managing deadlines and tasks of the technical office in Javascript using react on the frontend, and nodejs on the Backend."
-      },
-      {
-        "title": "Code review.",
-        "summary": "Assistance in the dart and javascript codes of the other two developers who work with me."
-      }
-    ]
-  }
+  "jobs": [
+    {
+      "title": "Development Intern at Sangati Berga",
+      "resume": "I worked as a development intern at Sangati Berga, during this period I had great experiences and learned a little more about how it works and software development in companies in the industrial sector. During the period I had three main responsibilities:",
+      "job_responsabilities": [
+        {
+          "title": "Machine control",
+          "summary": "Development of mobile software for machine control in dart, javascript and c ++ languages. During the period I used the flutter framework on the frontend, on the backend I used nodejs and c ++."
+        },
+        {
+          "title": "Time is money",
+          "summary": "Development of software for managing deadlines and tasks of the technical office in Javascript using react on the frontend, and nodejs on the Backend."
+        },
+        {
+          "title": "Code review",
+          "summary": "Assistance in the dart and javascript codes of the other two developers who work with me."
+        }
+      ]
+    },
+    {
+      "title": "Smarttv developer at Mirakulo",
+      "resume": "I currently work as a smarttv developer at Mirakulo software. Together with the Globo network television we built and currently maintain Globoplay for smarttv, one of the most used applications in the country. At mirakulo one of the people responsible for:",
+      "job_responsabilities": [
+        {
+          "title": "Globoplay kids",
+          "summary": "Creation of the application's kids mode with implementation with its own graphic interface, application of filters on the backend in addition to sending metrics to google analytics."
+        },
+        {
+          "title": "Maintenance and innovation at Globoplay",
+          "summary": "Maintenance of the app in partnership with the globe team Implementing good practices and design standards as well as versioning implementing Git Flow."
+        }
+      ]
+    }
+  ]
 }
