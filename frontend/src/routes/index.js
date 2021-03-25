@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import { RoutesENUM } from "../contants/";
+import { RoutesENUM } from "../constants/";
 import { ExperiencesPage } from "../pages/Experiences";
 import { CodeSkills } from "../pages/CodeSkills";
 import { HomePage } from "../pages/Home";

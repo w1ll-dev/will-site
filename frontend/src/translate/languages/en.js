@@ -11,12 +11,12 @@ const {
 
   theme_title,
   language,
-  settings_title, 
+  settings_title,
   contacts,
 
   skills,
 
-  last_job,
+  jobs
 } = en;
 
 const { flutter, reactjs, nodejs } = skills;
@@ -33,7 +33,7 @@ export const enText = {
       language,
       experiences_page_title,
       skills_page_title,
-      
+
       settings_title,
       contacts: {
         linkedIn: contacts.linkedIn,
@@ -53,25 +53,40 @@ export const enText = {
           summary: nodejs.summary,
         },
       },
-      last_job: {
-        title: last_job.title,
-        resume: last_job.resume,
-        job_responsabilities: 
-        [
-          {
-            title: last_job.job_responsabilities[0].title,
-            summary: last_job.job_responsabilities[0].summary,
-          },
-          {
-            title: last_job.job_responsabilities[1].title,
-            summary: last_job.job_responsabilities[1].summary,
-          },
-          {
-            title: last_job.job_responsabilities[2].title,
-            summary: last_job.job_responsabilities[2].summary,
-          },
-        ]
-      },
+      jobs: [
+        {
+          title: jobs[0].title,
+          resume: jobs[0].resume,
+          job_responsabilities: [
+            {
+              title: jobs[0].job_responsabilities[0].title,
+              summary: jobs[0].job_responsabilities[0].summary,
+            },
+            {
+              title: jobs[0].job_responsabilities[1].title,
+              summary: jobs[0].job_responsabilities[1].summary,
+            },
+            {
+              title: jobs[0].job_responsabilities[2].title,
+              summary: jobs[0].job_responsabilities[2].summary,
+            },
+          ]
+        },
+        {
+          title: jobs[1].title,
+          resume: jobs[1].resume,
+          job_responsabilities: [
+            {
+              title: jobs[1].job_responsabilities[0].title,
+              summary: jobs[1].job_responsabilities[0].summary,
+            },
+            {
+              title: jobs[1].job_responsabilities[1].title,
+              summary: jobs[1].job_responsabilities[1].summary,
+            },
+          ]
+        }
+      ],
     },
   },
 };

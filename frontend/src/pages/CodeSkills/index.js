@@ -12,7 +12,7 @@ import {
   SkillSummary,
 } from "./style";
 import { i18n } from '../../translate/i18n';
-import { i18nKeys } from "../../contants";
+import { i18nKeys } from "../../constants";
 const { skills, skills_page_title } = i18nKeys;
 
 const codeSkillsList = [

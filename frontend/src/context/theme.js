@@ -1,19 +1,21 @@
-import React, { createContext, useState, useContext, useEffect } from "react";
+import React, {
+  createContext,
+  useState,
+  useContext,
+  useEffect
+} from "react";
 import { ThemeProvider } from "styled-components";
 import themes from "../styles/themes";
-import { Idiom } from "../contants/";
-const { storageKey, ptKey } = Idiom;
 
 const GlobalContext = createContext();
 
 // Provide state to all app
 export const StateProvider = ({ children }) => {
-  const defaultIdiom = localStorage.getItem(storageKey) || ptKey;
   const [activeTheme, setTheme] = useState("light");
 
   // if has no theme selected to session set light theme
   useEffect(() => {
-    const themeFromStorage = localStorage.getItem("theme") || "light";
+    const themeFromStorage = localStorage.getItem("theme") ?? "light";
     setTheme(themeFromStorage);
   }, []);
 
