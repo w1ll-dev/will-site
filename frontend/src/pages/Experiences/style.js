@@ -29,7 +29,7 @@ export const LastJobResume = styled(Container)`
 export const ResponsabilitiesContainer = styled(Container)`
   flex: 1;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   @media (${device.mobileL}) {
     flex-direction: column;
@@ -52,6 +52,7 @@ export const JobResposabilityContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 600px;
   transform: translateY(0rem);
   transition: 500ms;
   &:hover {
@@ -79,7 +80,7 @@ export const PageTitle = styled.h1`
 
 export const LastJobTitle = styled.h2`
   text-align: center;
-  margin-bottom: 2rem;
+  max-width: 400px;
 `;
 
 export const ResponsabilityIcon = styled.img`
@@ -87,7 +88,10 @@ export const ResponsabilityIcon = styled.img`
   height: 10rem;
 `;
 
-export const JobResposabilityTitle = styled.h3``;
+export const JobResposabilityTitle = styled.h3`
+  max-width: 300px;
+  text-align: center;
+`;
 
 export const Summary = styled.p`
   text-align: center;
