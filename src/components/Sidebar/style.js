@@ -8,7 +8,7 @@ export const Wrapper = styled.nav`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  width: 8rem;
+  width: 9rem;
   background: ${({ theme }) => theme.backgroundSidebar};
   padding: 2rem 0;
 
@@ -49,15 +49,42 @@ export const ContactIcon = styled.img`
   }
 `;
 
+export const Profile = styled(Container)`
+  display: flex;
+  height: 10rem;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  @media (${device.mobileL}) {
+    display: none;
+  }
+`;
+
 export const MyAvatar = styled(Container)`
   border-radius: 50%;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   background-image: url(${Me});
   background-size: contain;
   @media (${device.mobileL}) {
     display: none;
   }
+`;
+
+export const MyName = styled.span`
+  font-size: 1rem;
+  font-weight: bold;
+  color: ${({theme}) => theme.backgroundContent};
+  @media (${device.mobileL}) {
+    display: none;
+  }
+`;
+
+export const MyOccupation = styled(MyName)`
+  font-size: 0.9rem;
+  width: 7rem;
+  text-align: center;
+  font-weight: normal;
 `;
 
 export const TranslateRow = styled(ContactRow)``;
@@ -71,5 +98,5 @@ export const CountryFlag = styled.img`
 export const SettingsIcon = styled.img`
   width: 2rem;
   height: 2rem;
-  cursor: pointer;
+  opacity: ${({ active }) => !active && 0.4};
 `;

@@ -33,19 +33,17 @@ const codeSkillsList = [
   },
 ];
 
-export const CodeSkills = () => {
-  return (
-    <Wrapper>
-      <PageTitle children={i18n.t(skills_page_title)} />
-      <SkillsRow>
-        {codeSkillsList.map(({ skillIcon, skillTitle, skillSummary }) => (
-          <SkillCard key={Math.random()}>
-            <SkillTitle children={i18n.t(skillTitle)} />
-            <SkillAvatar skillImage={skillIcon} />
-            <SkillSummary children={i18n.t(skillSummary)} />
-          </SkillCard>
-        ))}
-      </SkillsRow>
-    </Wrapper>
-  );
-};
+export const CodeSkills = () => (
+  <Wrapper>
+    <PageTitle children={i18n.t(skills_page_title)} />
+    <SkillsRow>
+      {codeSkillsList.map(({ skillIcon, skillTitle, skillSummary }) => (
+        <SkillCard key={Math.random()}>
+          <SkillTitle children={i18n.t(skillTitle)} />
+          <SkillAvatar skillImage={skillIcon} />
+          <SkillSummary children={i18n.t(skillSummary)} />
+        </SkillCard>
+      ))}
+    </SkillsRow>
+  </Wrapper>
+);

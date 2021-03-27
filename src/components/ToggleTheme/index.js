@@ -12,9 +12,11 @@ export const ToggleTheme = () => {
   const { changeTheme, activeTheme } = useTheme();
   const { colors } = theme
 
+  const newTheme = activeTheme === "light" ? "dark" : "light"
+
   return (
     <Switch
-      onChange={() => changeTheme()}
+      onChange={() => changeTheme(newTheme)}
       checked={activeTheme === "light"}
       onColor={`${colors.lightOrange}`}
       onHandleColor={`${colors.dark}`}

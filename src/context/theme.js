@@ -20,8 +20,7 @@ export const StateProvider = ({ children }) => {
   }, []);
 
   // set theme to state and session storage
-  const changeTheme = () => {
-    const newTheme = activeTheme === "dark" ? "light" : "dark";
+  const changeTheme = (newTheme) => {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };

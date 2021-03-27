@@ -3,6 +3,7 @@ const {
   welcome,
   about_me_title,
   my_name,
+  my_profession,
   short_summary,
   complete_summary,
 
@@ -27,6 +28,7 @@ export const ptText = {
       welcome,
       about_me_title,
       my_name,
+      my_profession,
       short_summary,
       complete_summary,
 
@@ -36,6 +38,7 @@ export const ptText = {
       theme_title,
       language,
       contacts: {
+        contactsTitle: contacts.contactsTitle,
         linkedIn: contacts.linkedIn,
         github: contacts.github,
       },

@@ -51,7 +51,7 @@ export const HomePage = () => {
         <CompleteSummary children={i18n.t(complete_summary)} />
         {isMobile && (
           <ContactContainer>
-            <ContactTitle>Perfis</ContactTitle>
+            <ContactTitle>{i18n.t(contacts.contactsTitle)}</ContactTitle>
             <ContactRow>
               <LinkContainer href={LINKEDIN_URL}>
                 <ContactIcon src={linkedinIcon} />

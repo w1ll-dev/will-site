@@ -7,10 +7,14 @@ export const Menu = ({ menuItemsList }) => {
 
   return (
     <MenuList>
-      {menuItemsList.map(({ itemIcon, itemRoute }, index) => (
+      {menuItemsList.map(({ itemIcon, itemRoute, itemTitle }) => (
         <MenuItem key={Math.random()}>
           <Link to={itemRoute}>
-            <ItemIcon src={itemIcon} active={itemRoute === currentRoute} />
+            <ItemIcon 
+              src={itemIcon} 
+              active={itemRoute === currentRoute}
+              title={itemTitle}
+            />
           </Link>
         </MenuItem>
       ))}
