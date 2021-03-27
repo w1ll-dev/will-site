@@ -3,6 +3,7 @@ const {
   welcome,
   about_me_title,
   my_name,
+  my_profession,
   short_summary,
   complete_summary,
 
@@ -27,6 +28,7 @@ export const enText = {
       welcome,
       about_me_title,
       my_name,
+      my_profession,
       short_summary,
       complete_summary,
       theme_title,
@@ -36,6 +38,7 @@ export const enText = {
 
       settings_title,
       contacts: {
+        contactsTitle: contacts.contactsTitle,
         linkedIn: contacts.linkedIn,
         github: contacts.github,
       },
