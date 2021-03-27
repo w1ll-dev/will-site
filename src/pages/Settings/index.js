@@ -22,7 +22,7 @@ const { settings_title, theme_title, language } = i18nKeys;
 
 export const Settigs = () => {
   const { enKey, ptKey, storageKey } = Idiom;
-  const { changeTheme, activeTheme } = useTheme();
+  const { changeTheme } = useTheme();
 
   const changeIdiom = ({ newIdiomKey }) => {
     localStorage.setItem(`${storageKey}`, newIdiomKey);
@@ -36,11 +36,11 @@ export const Settigs = () => {
         <SettingTitle>{i18n.t(theme_title)}</SettingTitle>
         <IconRow>
           <Icon
-            onClick={activeTheme !== "light" && changeTheme}
+            onClick={() => changeTheme("light")}
             src={sunIcon}
           />
           <Icon
-            onClick={activeTheme !== "dark" && changeTheme}
+            onClick={() => changeTheme("dark")}
             src={moonIcon}
           />
         </IconRow>
