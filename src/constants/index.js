@@ -21,6 +21,7 @@ export const i18nKeys = {
   welcome: "welcome",
   about_me_title: "about_me_title",
   my_name: "my_name",
+  my_profession: "my_profession",
   short_summary: "short_summary",
   complete_summary: "complete_summary",
   experiences_page_title: "experiences_page_title",
@@ -43,6 +44,7 @@ export const i18nKeys = {
   },
   settings_title: "settings_title",
   contacts: {
+    contactsTitle: "contacts.contactsTitle",
     linkedIn: "contacts.linkedIn",
     github: "contacts.github",
   },
