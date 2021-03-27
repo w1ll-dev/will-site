@@ -25,8 +25,11 @@ export const Settigs = () => {
   const { changeTheme } = useTheme();
 
   const changeIdiom = ({ newIdiomKey }) => {
-    localStorage.setItem(`${storageKey}`, newIdiomKey);
-    window.location = window.location;
+    const currentIdiomKey = localStorage.getItem(`${storageKey}`)
+    if (currentIdiomKey !== newIdiomKey) {
+      localStorage.setItem(`${storageKey}`, newIdiomKey);
+      window.location = window.location;
+    }
   };
 
   return (
