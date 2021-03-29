@@ -2,14 +2,16 @@ import styled from "styled-components";
 import { Container } from "../../components/commom/index";
 import Me from "../../assets/images/me.jpeg";
 import { device } from "../../styles/devices";
+import { pageTransitions } from "../../styles/animations";
 
 export const Wrapper = styled(Container)`
   flex-direction: column;
-  height: 100%;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  width: 100%;
+  animation: ${pageTransitions} 500ms linear;
   @media (${device.mobileL}) {
-    height: 100vh;
+    height: 1fr;
   }
 `;
 
@@ -24,6 +26,7 @@ export const HomeAvatar = styled(Container)`
 `;
 
 export const Welcome = styled.h1`
+  margin: 3rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid ${({ theme }) => theme.backgroundSidebar};
 `;
@@ -32,6 +35,7 @@ export const PageContent = styled(Container)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2rem;
 `;
 
 export const MyName = styled.h2`
@@ -41,6 +45,9 @@ export const MyName = styled.h2`
 export const ShortSummary = styled.h3`
   text-align: center;
   margin-bottom: 3rem;
+  @media (${device.mobileL}) {
+    width: 70%;
+  }
 `;
 
 export const AboutMeTitle = styled.h2`
@@ -49,9 +56,13 @@ export const AboutMeTitle = styled.h2`
 
 export const CompleteSummary = styled.p`
   text-align: center;
-  width: 80%;
+  width: 50rem;
+  @media (${device.tablet}) {
+    width: 70%;
+  }
+
   @media (${device.mobileL}) {
-    width: 80%;
+    width: 100%;
   }
 `;
 export const ContactContainer = styled(Container)`
@@ -70,8 +81,12 @@ export const ContactRow = styled(Container)`
   width: 100%;
 `;
 
+export const ContactLabel = styled.h4``;
+
 export const ContactIcon = styled.img`
   width: 5rem;
   height: 5rem;
+  @media (${device.mobileL}) {
+    margin: 1rem 0;
+  }
 `;
-

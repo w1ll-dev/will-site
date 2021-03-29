@@ -1,21 +1,26 @@
 import styled from "styled-components";
 import { Container } from "../../components/commom/index";
 import { device } from "../../styles/devices";
+import { pageTransitions } from "../../styles/animations";
 
 export const Wrapper = styled(Container)`
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  animation: ${pageTransitions} 500ms linear;
   @media (${device.mobileL}) {
     padding: 1rem;
+    overflow-y: scroll;
   }
-
-  padding: 5rem 2rem;
+  
+  padding: 2rem 2rem;
 `;
 
 export const LastJobResume = styled(Container)`
   flex-direction: column;
   @media (${device.mobileL}) {
-    box-shadow: 0 0 3px ${({theme}) => theme.backgroundSidebar}; 
+    box-shadow: 0 0 3px ${({ theme }) => theme.backgroundSidebar};
     flex-direction: column;
     padding: 2rem 0;
   }
@@ -24,7 +29,7 @@ export const LastJobResume = styled(Container)`
 export const ResponsabilitiesContainer = styled(Container)`
   flex: 1;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   @media (${device.mobileL}) {
     flex-direction: column;
@@ -47,6 +52,7 @@ export const JobResposabilityContainer = styled(Container)`
   justify-content: center;
   align-items: center;
   width: 100%;
+  max-width: 600px;
   transform: translateY(0rem);
   transition: 500ms;
   &:hover {
@@ -57,6 +63,11 @@ export const JobResposabilityContainer = styled(Container)`
     width: 90%;
     padding: 2rem 0;
     border-bottom: 2px solid ${({ theme }) => theme.backgroundSidebar};
+    &:last-child {
+      border: none;
+    }
+    transform: none;
+    transition: 0;
   }
 `;
 
@@ -64,12 +75,12 @@ export const PageTitle = styled.h1`
   text-align: center;
   margin-bottom: 2rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid ${({theme}) => theme.backgroundSidebar};
+  border-bottom: 2px solid ${({ theme }) => theme.backgroundSidebar};
 `;
 
 export const LastJobTitle = styled.h2`
   text-align: center;
-  margin-bottom: 2rem;
+  max-width: 400px;
 `;
 
 export const ResponsabilityIcon = styled.img`
@@ -77,8 +88,12 @@ export const ResponsabilityIcon = styled.img`
   height: 10rem;
 `;
 
-export const JobResposabilityTitle = styled.h3``;
+export const JobResposabilityTitle = styled.h3`
+  max-width: 300px;
+  text-align: center;
+`;
 
 export const Summary = styled.p`
   text-align: center;
+  padding: 2rem;
 `;

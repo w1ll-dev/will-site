@@ -9,7 +9,7 @@ export default {
     textColor: "#fff",
   },
   light: {
-    textColor: "#333",
+    textColor: "#161b27",
     backgroundSidebar: "#161b27",
     backgroundContent: "#fff",
   },

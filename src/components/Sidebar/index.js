@@ -3,49 +3,121 @@ import { Menu } from "../Menu";
 import {
   Wrapper,
   MyAvatar,
+  Profile,
+  MyName,
+  MyOccupation,
   BottomContainer,
   ContactRow,
   ContactIcon,
+  TranslateRow,
+  CountryFlag,
+  SettingsIcon,
 } from "./style";
-import homeIcon from "../../assets/icons/home.svg";
-import experienceIcon from "../../assets/icons/experience.svg";
-// import contactIcon from "../../assets/icons/contact.svg";
-import codeIcon from "../../assets/icons/code.svg";
-import githubIcon from "../../assets/icons/github.svg";
-import linkedinIcon from "../../assets/icons/linkedin.svg";
+import {
+  homeIcon,
+  experienceIcon,
+  codeIcon,
+  githubIcon,
+  githubWhiteIcon,
+  linkedinIcon,
+  brazilIcon,
+  usaIcon,
+  settingsIcon
+} from '../../assets'
 import { ToggleTheme } from "../ToggleTheme";
-import { RoutesENUM } from "../../contants";
-import { Contacts } from "../../contants";
+import { RoutesENUM, Idiom } from "../../constants";
+import { Contacts } from "../../constants";
 import { LinkContainer } from "../commom";
+import { useTheme } from "../../context/theme";
+import { Link, useLocation } from "react-router-dom";
+import { i18n } from '../../translate/i18n';
+import { i18nKeys } from "../../constants";
 
 const items = [
-  { itemIcon: homeIcon, itemRoute: RoutesENUM.HOME },
-  { itemIcon: experienceIcon, itemRoute: RoutesENUM.EXPERIENCE },
-  // { itemIcon: contactIcon, itemRoute: RoutesENUM.CONTACT },
-  { itemIcon: codeIcon, itemRoute: RoutesENUM.CODE_SKILLS },
+  {
+    itemIcon: homeIcon,
+    itemRoute: RoutesENUM.HOME,
+    itemTitle: "home"
+  },
+  {
+    itemIcon: experienceIcon,
+    itemRoute: RoutesENUM.EXPERIENCE,
+    itemTitle: "experiences"
+  },
+  {
+    itemIcon: codeIcon,
+    itemRoute: RoutesENUM.CODE_SKILLS,
+    itemTitle: "skills"
+  },
 ];
 
-const { GITHUB_URL, LINKEDIN_URL} = Contacts
+const {
+  my_name,
+  my_profession
+} = i18nKeys;
+
+const { GITHUB_URL, LINKEDIN_URL } = Contacts;
 
 export const Sidebar = () => {
-  const noMobile = window.innerWidth > 1300;
+  const { pathname: currentRoute } = useLocation();
+  const { enKey, ptKey, storageKey } = Idiom;
+  const noMobile = window.innerWidth > 438;
+  const { activeTheme } = useTheme();
+
+  const changeIdiom = ({ newIdiomKey }) => {
+    const currentIdiomKey = localStorage.getItem(`${storageKey}`)
+    if (currentIdiomKey !== newIdiomKey) {
+      localStorage.setItem(`${storageKey}`, newIdiomKey);
+      window.location = window.location;
+    }
+  };
+
   return (
     <Wrapper>
-      <MyAvatar />
+      <Profile>
+        <MyAvatar />
+        <MyName children={i18n.t(my_name)} />
+        <MyOccupation children={i18n.t(my_profession)} />
+      </Profile>
       <Menu menuItemsList={items} />
-      <BottomContainer>
-        {noMobile && (
+      {noMobile ? (
+        <BottomContainer>
           <ContactRow>
             <LinkContainer href={GITHUB_URL}>
-              <ContactIcon src={githubIcon} />
+              <ContactIcon
+                src={activeTheme === "light" ? githubWhiteIcon : githubIcon}
+                title={"github"}
+              />
             </LinkContainer>
             <LinkContainer href={LINKEDIN_URL}>
-              <ContactIcon src={linkedinIcon} />
+              <ContactIcon
+                src={linkedinIcon}
+                title={"linkedIn"}
+              />
             </LinkContainer>
           </ContactRow>
-        )}
-        <ToggleTheme />
-      </BottomContainer>
+          <ToggleTheme />
+          <TranslateRow>
+            <CountryFlag
+              src={brazilIcon}
+              title={"portuguese"}
+              onClick={() => changeIdiom({ newIdiomKey: ptKey })}
+            />
+            <CountryFlag
+              src={usaIcon}
+              title={"english"}
+              onClick={() => changeIdiom({ newIdiomKey: enKey })}
+            />
+          </TranslateRow>
+        </BottomContainer>
+      ) : (
+        <Link to={RoutesENUM.SETTINGS}>
+          <SettingsIcon
+            src={settingsIcon}
+            active={currentRoute === RoutesENUM.SETTINGS}
+          />
+        </Link>
+      )}
     </Wrapper>
   );
 };

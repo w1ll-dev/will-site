@@ -1,7 +1,8 @@
 import React from "react";
+import { i18n } from '../../translate/i18n';
+import { i18nKeys } from "../../constants";
 import {
   Wrapper,
-  PageResume,
   Welcome,
   HomeAvatar,
   MyName,
@@ -12,36 +13,55 @@ import {
   ContactContainer,
   ContactTitle,
   ContactRow,
+  ContactLabel,
   ContactIcon,
 } from "./style";
-import githubIcon from "../../assets/icons/github.svg";
-import linkedinIcon from "../../assets/icons/linkedin.svg";
-import { text } from "../../assets/text/pt";
+import {
+  githubIcon,
+  githubWhiteIcon,
+  linkedinIcon,
+} from '../../assets'
 import { LinkContainer } from "../../components/commom";
-import { Contacts} from "../../contants";
+import { Contacts } from "../../constants";
+import { useTheme } from "../../context/theme";
 
-const {LINKEDIN_URL, GITHUB_URL} = Contacts
+const { LINKEDIN_URL, GITHUB_URL } = Contacts;
+
+const {
+  contacts,
+  welcome,
+  my_name,
+  short_summary,
+  about_me_title,
+  complete_summary,
+} = i18nKeys;
 
 export const HomePage = () => {
-  const isMobile = window.innerWidth < 1200;
+  const isMobile = window.innerWidth < 438;
+  const { activeTheme } = useTheme();
+
   return (
     <Wrapper>
-      <Welcome children={text.welcome} />
+      <Welcome children={i18n.t(welcome)} />
+      <HomeAvatar />
       <PageContent>
-        <HomeAvatar />
-        <MyName children={text.my_name} />
-        <ShortSummary children={text.short_summary} />
-        <AboutMeTitle children={text.about_me_title} />
-        <CompleteSummary children={text.complete_summary} />
+        <MyName children={i18n.t(my_name)} />
+        <ShortSummary children={i18n.t(short_summary)} />
+        <AboutMeTitle children={i18n.t(about_me_title)} />
+        <CompleteSummary children={i18n.t(complete_summary)} />
         {isMobile && (
           <ContactContainer>
-            <ContactTitle>Perfis</ContactTitle>
+            <ContactTitle>{i18n.t(contacts.contactsTitle)}</ContactTitle>
             <ContactRow>
               <LinkContainer href={LINKEDIN_URL}>
-                <ContactIcon src={githubIcon} />
+                <ContactIcon src={linkedinIcon} />
+                <ContactLabel children={i18n.t(contacts.linkedIn)} />
               </LinkContainer>
               <LinkContainer href={GITHUB_URL}>
-                <ContactIcon src={linkedinIcon} />
+                <ContactIcon
+                  src={activeTheme === "light" ? githubIcon : githubWhiteIcon}
+                />
+                <ContactLabel children={i18n.t(contacts.github)} />
               </LinkContainer>
             </ContactRow>
           </ContactContainer>
