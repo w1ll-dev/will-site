@@ -5,8 +5,7 @@ export const MenuList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 12rem;
-  justify-content: space-around;
+  justify-content: space-between;
   @media(${device.mobileL}){
     flex-direction: row;
     width: 50%;
@@ -16,7 +15,10 @@ export const MenuList = styled.ul`
 export const MenuItem = styled.li`
   cursor: pointer;
   display: flex;
-  padding: 0.5rem;
+  padding: 1rem;
+  @media(${device.mobileL}){
+    padding: 0 1.5rem;
+  }
 `;
 
 export const ItemIcon = styled.img`

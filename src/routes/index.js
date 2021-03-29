@@ -1,10 +1,10 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import { RoutesENUM } from "../contants/";
+import { RoutesENUM } from "../constants/";
 import { ExperiencesPage } from "../pages/Experiences";
 import { CodeSkills } from "../pages/CodeSkills";
-import { Contact } from "../pages/Contact";
 import { HomePage } from "../pages/Home";
+import { Settigs } from "../pages/Settings";
 
 export const RootRouter = () => {
   return (
@@ -15,8 +15,8 @@ export const RootRouter = () => {
       <Route exact path={RoutesENUM.CODE_SKILLS}>
         <CodeSkills />
       </Route>
-      <Route exact path={RoutesENUM.CONTACT}>
-        <Contact />
+      <Route exact path={RoutesENUM.SETTINGS}>
+        <Settigs />
       </Route>
       <Route exact path={RoutesENUM.EXPERIENCE}>
         <ExperiencesPage />
