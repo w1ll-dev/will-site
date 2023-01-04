@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.js": "/will-site/static/js/main.b5356863.chunk.js",
+    "main.js.map": "/will-site/static/js/main.b5356863.chunk.js.map",
+    "runtime-main.js": "/will-site/static/js/runtime-main.633d3685.js",
+    "runtime-main.js.map": "/will-site/static/js/runtime-main.633d3685.js.map",
+    "static/js/2.3562adfc.chunk.js": "/will-site/static/js/2.3562adfc.chunk.js",
+    "static/js/2.3562adfc.chunk.js.map": "/will-site/static/js/2.3562adfc.chunk.js.map",
+    "index.html": "/will-site/index.html",
+    "precache-manifest.918d28768d36848431db4a97acc163ae.js": "/will-site/precache-manifest.918d28768d36848431db4a97acc163ae.js",
+    "service-worker.js": "/will-site/service-worker.js",
+    "static/js/2.3562adfc.chunk.js.LICENSE.txt": "/will-site/static/js/2.3562adfc.chunk.js.LICENSE.txt",
+    "static/media/brazil.svg": "/will-site/static/media/brazil.594fd14f.svg",
+    "static/media/code-review.svg": "/will-site/static/media/code-review.f7e655ee.svg",
+    "static/media/code.svg": "/will-site/static/media/code.cca45114.svg",
+    "static/media/experience.svg": "/will-site/static/media/experience.fb16be4a.svg",
+    "static/media/flutter-dev.svg": "/will-site/static/media/flutter-dev.658bf582.svg",
+    "static/media/flutter.png": "/will-site/static/media/flutter.303729d0.png",
+    "static/media/github-white.png": "/will-site/static/media/github-white.0c768863.png",
+    "static/media/github.svg": "/will-site/static/media/github.1f33e75d.svg",
+    "static/media/home.svg": "/will-site/static/media/home.77e2fcb8.svg",
+    "static/media/kids-dark.svg": "/will-site/static/media/kids-dark.9164ee22.svg",
+    "static/media/kids-light.svg": "/will-site/static/media/kids-light.c3cec8e7.svg",
+    "static/media/linkedin.svg": "/will-site/static/media/linkedin.f54e1d68.svg",
+    "static/media/maintence-dark.svg": "/will-site/static/media/maintence-dark.40078e28.svg",
+    "static/media/maintence-light.svg": "/will-site/static/media/maintence-light.65e2d61d.svg",
+    "static/media/me.jpeg": "/will-site/static/media/me.b350f2e0.jpeg",
+    "static/media/moon.svg": "/will-site/static/media/moon.5039864c.svg",
+    "static/media/node.png": "/will-site/static/media/node.9c4ab203.png",
+    "static/media/react-dev.svg": "/will-site/static/media/react-dev.85b6f678.svg",
+    "static/media/react.png": "/will-site/static/media/react.04557c1b.png",
+    "static/media/settings.svg": "/will-site/static/media/settings.9b3341c7.svg",
+    "static/media/sun.svg": "/will-site/static/media/sun.c5f0249e.svg",
+    "static/media/united-states.svg": "/will-site/static/media/united-states.4a90ee18.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.633d3685.js",
+    "static/js/2.3562adfc.chunk.js",
+    "static/js/main.b5356863.chunk.js"
+  ]
+}
